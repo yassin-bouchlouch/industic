@@ -1,0 +1,22 @@
+/*------------------- 
+    Icons
+------------------*/
+
+.social__icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+        margin-right: 20px;
+        color: $color-heading;
+
+        &:hover {
+            color: $color-theme;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

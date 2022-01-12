@@ -1,0 +1,155 @@
+/*--------------------------
+        pricing
+--------------------------*/
+.page-title-layout5+.pricing {
+    margin-top: -138px;
+    z-index: 3;
+}
+
+.pricing-item {
+    position: relative;
+    background-color: $color-white;
+    box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.08);
+    @include prefix(transition, all .3s ease, webkit moz ms o);
+    margin-bottom: 30px;
+
+    .pricing__label {
+        position: absolute;
+        top: -1px;
+        right: 30px;
+        width: 18px;
+        height: 40px;
+        background-color: $color-theme;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 6px;
+            width: 18px;
+            border: 9px solid transparent;
+            border-bottom-color: white;
+        }
+    }
+
+    .pricing__header {
+        padding: 46px 60px;
+        border-bottom: 2px solid #eaeaea;
+    }
+
+    .pricing__title {
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 7px;
+    }
+
+    .pricing__subtitle {
+        font-size: 13px;
+        display: block;
+    }
+
+    .pricing__price {
+        font-family: $font-heading;
+        font-size: 50px;
+        color: $color-heading;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 16px;
+    }
+
+    .pricing__time {
+        font-size: 14px;
+    }
+
+    .pricing__desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 23px;
+    }
+
+    .pricing__content {
+        padding: 45px 60px 35px;
+    }
+
+    .pricing__list {
+        margin-top: 40px;
+
+        li {
+            position: relative;
+            padding-left: 27px;
+            font-size: 14px;
+            line-height: 34px;
+            text-transform: capitalize;
+
+            &:after {
+                content: "\f00c";
+                font-family: FontAwesome;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $color-theme;
+            }
+        }
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .page-title-layout5+.pricing {
+        margin-top: 0;
+    }
+
+    .pricing .container {
+        max-width: none;
+        padding: 0 15px;
+    }
+
+    .pricing-item {
+
+        .pricing__header,
+        .pricing__content {
+            padding: 20px;
+        }
+
+        .pricing__list {
+            margin-top: 40px;
+        }
+
+        .pricing__title {
+            margin-bottom: 15px;
+        }
+
+        .pricing__price {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .pricing__title,
+        .pricing__desc {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title-layout5+.pricing {
+        margin-top: 0;
+    }
+
+    .pricing .container {
+        padding: 0 15px;
+    }
+
+    .pricing-item {
+        .pricing__list {
+            margin-top: 20px;
+        }
+
+        .pricing__header,
+        .pricing__content {
+            padding: 20px;
+        }
+    }
+}

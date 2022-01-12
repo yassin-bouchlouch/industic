@@ -1,0 +1,24 @@
+/*-------------------
+    lists
+-------------------*/
+.list-items li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 15px;
+    line-height: 31px;
+
+    &:before {
+        content: "\f00c";
+        font-family: 'Fontawesome';
+        position: absolute;
+        left: 0;
+    }
+}
+
+.list-items-white li {
+    color: $color-white;
+
+    &:before {
+        color: $color-white;
+    }
+}

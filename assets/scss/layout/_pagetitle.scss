@@ -1,0 +1,207 @@
+/*-------------------------
+    page title 
+-------------------------*/
+
+.header-transparent+.page-title {
+    margin-top: -100px;
+}
+
+.pagetitle__subheading {
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.pagetitle__heading {
+    font-size: 47px;
+    line-height: 64px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.pagetitle__desc {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.page-title {
+    padding: 265px 0 165px;
+
+    .breadcrumb {
+        margin-top: 33px;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb-item {
+        padding-bottom: 5px;
+    }
+
+    .breadcrumb-item.active {
+        color: $color-gray;
+    }
+
+    .breadcrumb-item a {
+        position: relative;
+        padding-bottom: 3px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-theme;
+        }
+    }
+
+    .breadcrumb-item.active a:after {
+        display: none;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-white;
+    }
+
+    .breadcrumb-item a:hover {
+        color: $color-theme;
+    }
+}
+
+.page-title-layout2 {
+    padding: 252px 0 22px;
+
+    .btn {
+        margin-top: 26px;
+    }
+
+    .breadcrumb {
+        margin-top: 109px;
+    }
+}
+
+.page-title-layout3 {
+    padding: 297px 0 193px;
+
+    .pagetitle__heading {
+        font-size: 57px;
+    }
+}
+
+.page-title-layout4 {
+    padding: 307px 0 212px;
+
+    .pagetitle__heading {
+        font-size: 57px;
+    }
+}
+
+.page-title-layout5 {
+    padding: 200px 0 230px;
+
+    .pagetitle__subheading {
+        margin-bottom: 12px;
+    }
+}
+
+.page-title-layout6 {
+    padding: 307px 0 212px;
+
+    .pagetitle__heading {
+        font-size: 57px;
+    }
+}
+
+.page-title-layout7 {
+    padding: 250px 0 153px;
+
+    .btn {
+        margin-top: 26px;
+    }
+}
+
+.page-title-layout8 {
+    padding: 265px 0 161px;
+}
+
+.page-title-layout9 {
+    padding: 60px 0 50px;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+
+    .pagetitle__heading {
+        color: $color-heading;
+    }
+}
+
+.page-title-layout10 {
+    padding: 217px 0 118px;
+
+    .pagetitle__heading {
+        font-size: 105px;
+        line-height: 105px;
+    }
+
+    .pagetitle__desc {
+        margin-top: 17px;
+        padding-right: 60px;
+    }
+}
+
+/* Medium Size Devices */
+@include md-screens {
+    .page-title {
+        padding: 200px 0 60px;
+    }
+
+    .page-title-layout2 {
+        padding: 200px 0 22px;
+    }
+
+    .page-title-layout3 {
+        padding: 200px 0 80px;
+    }
+
+    .page-title-layout9 {
+        padding: 50px 0;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title {
+        padding: 100px 0 50px;
+    }
+
+    .page-title-layout2 {
+        padding: 100px 0 22px;
+    }
+
+    .page-title-layout9 {
+        padding: 40px 0;
+    }
+
+    .pagetitle__desc {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        padding-right: 0 !important;
+    }
+
+    .pagetitle__heading {
+        font-size: 32px !important;
+        line-height: 42px !important;
+    }
+
+    .page-title .breadcrumb {
+        margin-top: 15px;
+    }
+}

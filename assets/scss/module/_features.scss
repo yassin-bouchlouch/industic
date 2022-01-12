@@ -1,0 +1,239 @@
+/*-----------------------
+    Features
+------------------------*/
+.feature-item {
+    position: relative;
+    margin-bottom: 30px;
+
+    .feature__img {
+        margin-bottom: 24px;
+
+        img {
+            border-radius: 3px;
+            @include prefix(transition, transform .3s ease, webkit moz ms o);
+        }
+    }
+
+    .feature__subtitle {
+        font-family: $font-body;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    .feature__title {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 18px;
+        @include prefix(transition, color .3s ease, webkit moz ms o);
+    }
+
+    .feature__desc {
+        margin-bottom: 0;
+    }
+
+    .feature__link {
+        display: block;
+        margin-top: 5px;
+    }
+
+    &:hover {
+        .feature__img img {
+            @include prefix(transform, translateY(-4px), webkit moz ms o);
+        }
+
+        .feature__title {
+            color: $color-theme;
+        }
+    }
+}
+
+.features-Layout2 {
+    z-index: 3;
+
+    .features-wrap {
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.12);
+    }
+
+    .feature-item {
+        padding: 38px 24px 40px 30px !important;
+        border-right: 2px solid #eaeaea;
+        margin-bottom: 0;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            width: 100%;
+            height: calc(100% + 40px);
+            background-color: $color-theme;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        .feature__desc {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+
+    .feature-item:hover:after {
+        opacity: 1;
+    }
+
+    .feature-item:hover {
+
+        .feature__title,
+        .feature__desc,
+        .feature__link {
+            color: $color-white;
+            z-index: 2;
+            position: relative;
+        }
+    }
+}
+
+.awards .feature__content {
+    padding-left: 30px;
+}
+
+.feature-list-item {
+    @include prefix(transition, all .3s linear, webkit moz ms o);
+
+    .feature__content {
+        position: relative;
+        padding-left: 15px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .feature__title {
+        margin-bottom: 15px;
+    }
+
+    .feature__desc {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.features-list-layout1 .feature__content:before {
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-theme;
+}
+
+.features-list-layout2 {
+    padding-bottom: 190px;
+
+    .feature-list-item {
+        margin-bottom: 0;
+        padding: 25px 30px;
+
+        &:hover {
+            background-color: rgba(#0f0f0f, 75%);
+        }
+
+        .feature__content {
+            padding-left: 38px;
+
+            &:before {
+                font-family: 'Fontawesome';
+                content: "\f00c";
+                color: $color-white;
+            }
+        }
+
+        .feature__title {
+            font-size: 20px;
+            color: $color-white;
+        }
+
+        .feature__desc {
+            color: #f4f4f4;
+        }
+    }
+}
+
+.features-list-layout3 {
+    .feature-list-item {
+        padding: 27px 15px 22px 25px;
+        border: 2px solid #e5e5e5;
+        background-color: $color-white;
+
+        &:hover {
+            border-color: $color-white;
+            box-shadow: 0px 1px 73px 0px rgba(40, 40, 40, 0.15);
+        }
+
+        .feature__content {
+            padding-left: 32px;
+
+            &:before {
+                font-family: 'Fontawesome';
+                content: "\f00c";
+                color: $color-theme;
+                font-size: 18px;
+            }
+        }
+
+        .feature__title {
+            font-size: 19.5px;
+            margin-bottom: 18px;
+        }
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .feature-item {
+
+        .feature__img {
+            margin-bottom: 20px;
+        }
+
+        .feature__title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .awards .feature__content {
+        padding-left: 0;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .feature-item {
+
+        .feature__img {
+            margin-bottom: 15px;
+        }
+
+        .feature__title {
+            margin-bottom: 10px;
+        }
+    }
+
+    .awards .feature-item {
+        text-align: center;
+
+        .feature__content {
+            padding-left: 0;
+        }
+    }
+}

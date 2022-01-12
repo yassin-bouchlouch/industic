@@ -1,0 +1,74 @@
+/*-----------------------
+    careers
+------------------------*/
+.careers .owl-carousel .owl-stage-outer {
+    margin: 0 -20px;
+    padding: 20px;
+}
+
+.job-item {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.08);
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    .btn__link i {
+        opacity: 0;
+        color: $color-theme;
+        @include prefix(transition, all 0.4s ease, webkit moz ms o);
+    }
+
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.14);
+        @include prefix(transform, translateY(-7px), webkit moz ms o);
+
+        .btn__link {
+            color: $color-theme;
+
+            i {
+                opacity: 1;
+                @include prefix(transform, translateX(5px), webkit moz ms o);
+            }
+        }
+    }
+
+    .job__meta {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    .job__type {
+        font-size: 13px;
+        text-transform: capitalize;
+        border: 1px solid $color-theme;
+        color: $color-theme;
+        padding: 3px 10px;
+        margin-right: 10px;
+    }
+
+    .job__location {
+        font-size: 13px;
+    }
+
+    .job__title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .job-item {
+        padding: 30px;
+
+        .job__meta {
+            margin-bottom: 20px;
+        }
+
+        .job__title {
+            margin-bottom: 10px;
+        }
+    }
+}

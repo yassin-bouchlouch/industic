@@ -1,0 +1,161 @@
+/*----------------------
+    About
+-----------------------*/
+
+.about {
+    .heading {
+        margin-bottom: 25px;
+    }
+
+    .carousel-wrap {
+        position: relative;
+        padding-right: 40px;
+
+        .carousel-arrows .owl-nav .owl-prev,
+        .carousel-arrows .owl-nav .owl-next {
+            bottom: 28px;
+            top: auto;
+            transform: translateY(0);
+            color: rgba(#fff, .5);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .carousel-arrows .owl-nav .owl-next {
+            right: 200px;
+        }
+
+        .counter-item {
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            z-index: 9;
+            background-color: $color-theme;
+            color: $color-white;
+            width: 200px;
+            padding: 50px;
+            text-align: left;
+            margin: 0;
+
+            .counter__icon {
+                margin-bottom: 27px;
+            }
+
+            h4 {
+                font-size: 38px;
+                margin-bottom: 10px;
+            }
+
+            .counter__subtitle {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.about__text {
+    p {
+        margin-bottom: 18px;
+    }
+
+    p:first-of-type {
+        color: #222222;
+        font-size: 17px !important;
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 28px;
+    }
+}
+
+.about__img {
+    position: relative;
+    padding-left: 35px;
+    overflow: hidden;
+}
+
+.about__img:after {
+    content: "";
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 35px;
+    height: 100%;
+    z-index: -1;
+    background-color: $color-theme;
+}
+
+.about-2 {
+    .features-list {
+        margin-left: 35px;
+    }
+
+    .btn__primary.popup-video {
+        height: 70px;
+        line-height: 68px;
+
+        &:hover {
+            background-color: $color-theme;
+            color: $color-white;
+        }
+    }
+
+    .about__img {
+        opacity: 0;
+        transition: opacity .4s, transform .75s;
+        @include prefix(transition-delay, 1s, webkit moz ms o);
+        @include prefix(transform, scale(0.95) translateY(30px), webkit moz ms o);
+    }
+
+    .about__img.animated-img {
+        opacity: 1;
+        @include prefix(transform, scale(1) translateY(0), webkit moz ms o);
+    }
+}
+
+@include md-screens {
+    .about-2 .heading {
+        margin-bottom: 0 !important;
+
+        .heading__title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .about .about__img {
+        margin-left: 30px;
+
+        &:before {
+            left: 0;
+        }
+    }
+
+    .about-2 .heading {
+        margin-bottom: 0 !important;
+
+        .heading__title {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Custom Media in Mobile Phones */
+@media only screen and (max-width: 450px) {
+    .about .carousel-wrap .counter-item {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .about .carousel-wrap {
+        padding-right: 0;
+    }
+
+    .about .carousel-wrap .carousel-arrows .owl-nav .owl-next {
+        right: 0;
+    }
+}
